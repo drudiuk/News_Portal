@@ -1,0 +1,35 @@
+.contacts-wrapper {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+.phone {
+    font-size: 60px;
+    font-weight: 400;
+    color: #004FEC;
+    margin-bottom: 50px;
+}
+
+.name {
+    font-size: 25px;
+    border-left: 2px solid #004FEC;
+    padding-left: 25px;
+}
+
+.mail {
+    margin: 25px 0 52px;
+}
+
+.profi {
+    opacity: 0.5;
+    margin-bottom: 25px;
+}
+
+p span {
+    color: #004FEC;
+}
+
+.wrapper-img {
+    max-width: 540px;
+}

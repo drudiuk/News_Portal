@@ -1,0 +1,23 @@
+.header {
+    display: flex;
+    align-items: center;
+    padding: 45px 0;
+    margin-bottom: 90px;
+}
+
+.navbar {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.navbar {
+        a {
+            font-size: 18px;
+            margin-left: 35px;
+        }    
+}
+
+.linkActive {
+    color: #004FEC;
+}
