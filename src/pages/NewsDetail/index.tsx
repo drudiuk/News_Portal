@@ -1,23 +1,28 @@
 import React, {useState, useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import routeMain from './routes';
-import getNews from 'services/getNews';
-import './styles.scss';
+//Redux
+import { useSelector } from 'react-redux';
+import { selectList } from 'store/news/selectors';
+
 import DateView from 'components/DateView';
 
 import { ID } from 'types/ID';
 import { INewsDetail } from 'types/INewsDetail';
 
+import './styles.scss';
+
 const NewsDetail = () => {
     const {id} = useParams<ID>();
-    const [news, setNews] = useState<INewsDetail | null>(null)
+    const [news, setNews] = useState<INewsDetail | undefined>(undefined)
+
+    const newsList = useSelector(selectList)
 
     useEffect(() => {
-        getNews().then(response => {
-            const currentNews = response.data.articles?.find((item: INewsDetail) => item._id === id)
-            setNews(currentNews);
-        })
-    })
+        const currentNews = newsList?.find((item: INewsDetail) => item._id === id)
+        setNews(currentNews);
+
+    }, [id, newsList]);
 
     return (
         <section className='newsDetailPage'>

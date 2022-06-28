@@ -1,9 +1,11 @@
 import React from 'react';
 import routeMain from './routes';
-import MyPhoto from 'assets/img/my-photo.jpg';
+// import MyPhoto from 'assets/img/my-photo.jpg';
 import './styles.scss';
 
 const Contacts = () => {
+    const myPhoto = require('assets/img/my-photo.jpg')
+
     return (
         <section className='contacts-wrapper'>
             <div className='contacts-info'>
@@ -14,7 +16,7 @@ const Contacts = () => {
                 <p>HTML CSS JavaScript <span>React</span></p>
             </div>
             <div className='wrapper-img'>
-                <img src={MyPhoto}/>
+                <img src={myPhoto}/>
             </div>
         </section>
     )
